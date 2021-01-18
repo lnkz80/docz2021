@@ -1,24 +1,39 @@
 import React from 'react'
-import {MENU, SUBMENU} from '../../Data/settings.js'
 import MenuItem from './MenuItem.jsx'
 
-function TopMenu(){
-    // const menuOut = MENU.map((mitem)=>{
-    //     return "<li>" + mitem.name + "</li>";
-    // }).join('');
-    return (
-        <div className='tmenu'>            
-            <ul>            
-                {
-                    MENU.map((mitem)=>{
-                        return <MenuItem mnuItem={mitem} key={mitem.id} />
-                    })
-                }               
-            </ul>
+class TopMenu extends React.Component {
+    render(){
+        return(
+            <div className='tmenu'>            
+                <ul>            
+                    {
+                        this.props.menu.map((mitem)=>{
+                            return <MenuItem mnuItem={mitem} key={mitem.link} />
+                        })
+                    }               
+                </ul>
             {/* {console.log(SUBMENU[MENU[2].link])} */}            
-        </div>
-        
-    );
+            </div>  
+        )
+    }
 }
+export default TopMenu
 
-export default TopMenu;
+// function TopMenu(){
+//     // const menuOut = MENU.map((mitem)=>{
+//     //     return "<li>" + mitem.name + "</li>";
+//     // }).join('');
+//     return (
+//         <div className='tmenu'>            
+//             <ul>            
+//                 {
+//                     MENU.map((mitem)=>{
+//                         return <MenuItem mnuItem={mitem} key={mitem.id} />
+//                     })
+//                 }               
+//             </ul>
+//             {/* {console.log(SUBMENU[MENU[2].link])} */}            
+//         </div>
+        
+//     );
+// }

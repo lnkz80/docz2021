@@ -1,9 +1,12 @@
 import React from 'react'
 
-function MenuItem({mnuItem}){    
-    return (
-    <li><a href={mnuItem.link}>{mnuItem.name}</a></li>
-    );
+class MenuItem extends React.Component {    
+    render(){
+        const item = this.props.mnuItem
+        return <li><a href={item.link}>{item.name}</a></li>        
+    }
 }
 
-export default MenuItem;
+// const MenuItem = ({mnuItem}) => <li><a href={mnuItem.link}>{mnuItem.name}</a></li> 
+
+export default MenuItem
