@@ -1,13 +1,13 @@
 export const MENU = [
-    {id: 0, name:'техника', link: 'technics'},
-    {id: 1, name:'документы', link: 'docs'},
-    {id: 2, name:'картриджи', link: 'carts'},
-    {id: 3, name:'справочники', link: 'libs'}
+    {id: 0, name:'техника', link: 'technics', comp: 'Technics'},
+    {id: 1, name:'документы', link: 'docs', comp: 'Docs'},
+    {id: 2, name:'картриджи', link: 'carts', comp: 'Carts'},
+    {id: 3, name:'справочники', link: 'libs', comp: 'Libs'}
 ];
 
 export const SUBMENU  = {
     technics: [        
-        {link: "osr", name: 'основные средства'},
+        {link: "osr", name: 'осн. ср-ва'},
         {link: "rsx", name: 'расходники'},
         {link: "rem", name: 'ремонт'},
         {link: "jrn", name: 'журнал'}
