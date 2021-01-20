@@ -8,15 +8,30 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 
 class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      dir: SUBMENU['technics']
+    }    
+  }
+
+
+  updLeftMenu = (value) => {
+    console.log(value)
+
+    this.setState({dir: SUBMENU[value]})
+  }
+
   render(){
     return (
       <div className='wrapper'>
         <Router>
         <Header title = {SITETITLE} />
-        <TopMenu menu = {MENU} />
-        <LeftMenu submenu={SUBMENU['technics']} />        
-        <Content />
-        </Router>      
+        <TopMenu menu = {MENU} updLeftMenu={this.updLeftMenu} />
+        <LeftMenu submenu={this.state.dir} />        
+        <Content />                
+        </Router>
+        
     </div>
     );
   }
