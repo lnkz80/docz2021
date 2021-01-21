@@ -10,7 +10,7 @@ class TopMenu extends React.Component {
                     {
                         this.props.menu.map((mitem)=>{
                             // console.log(mitem.link)
-                            return <MenuItem mnuItem={mitem} key={mitem.link} updLeftMenu={this.props.updLeftMenu} />                            
+                            return <MenuItem mnuItem={mitem} key={mitem.link} updLeftMenu={this.props.updLeftMenu} />
                         })
                     }               
                 </ul>            

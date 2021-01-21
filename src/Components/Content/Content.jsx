@@ -13,14 +13,19 @@ import {Switch, Route} from 'react-router-dom'
 
 class Content extends React.Component {    
     render(){        
+        
         return(
             <div className='content'>
                    <Switch>
                        <Route exact path="/" component={StartPage} />
+{/* 
+//!TODO Дописать переход по ссылкам SUBMENU
+*/}
                        <Route path="/technics/osr" component={TechOSR} />
                        <Route path="/technics/rsx" component={TechRSX} />
                        <Route path="/technics/rem" component={TechREM} />
                        <Route path="/technics/jrn" component={TechJRN} />
+                       
                        <Route path="/technics" component={Technics} />
                        <Route path="/docs" component={Docs} />
                        <Route path="/carts" component={Carts} />

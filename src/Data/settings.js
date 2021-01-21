@@ -22,7 +22,11 @@ export const SUBMENU  = {
         {link: "out", name: 'расход'},
         {link: "jrn", name: 'журнал'}
     ],
-    libs: {}
+    libs: [
+        {link: "techl", name: 'техника'},
+        {link: "docl", name: 'документы'},
+        {link: "cartsl", name: 'картриджи'}
+]
 }
 
 export const SITETITLE = "Docz_2021"

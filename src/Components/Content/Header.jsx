@@ -5,7 +5,7 @@ class Header extends React.Component {
     render(){
         return (
         <div className="header">
-        <h1><NavLink to="/">{this.props.title}</NavLink></h1>
+        <h1><NavLink to="/" onClick={()=>{this.props.updLeftMenu('')}}>{this.props.title}</NavLink></h1>
         </div>
     )
     }

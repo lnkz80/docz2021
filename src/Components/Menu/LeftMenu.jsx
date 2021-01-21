@@ -2,18 +2,15 @@ import React from 'react'
 import MenuItem from './MenuItem.jsx'
 
 class LeftMenu extends React.Component {
-    render() {
+    
+    render() {       
+        let lmenuout = (this.props.submenu) ? this.props.submenu.map((mitem)=><MenuItem mnuItem={mitem} key={mitem.link} />) : 'Hello, mr. Alex'
         return (
             <div className='lmenu'>
                 <ul>            
-                    {
-                        this.props.submenu.map((mitem)=>{
-                            return <MenuItem mnuItem={mitem} key={mitem.link} />                            
-                            })
-                     
-                    }               
+                    {lmenuout}               
                 </ul>
-                {console.log(this.props.submenu)}
+                {/* {console.log(this.props.submenu)} */}
             </div>
         )
         }

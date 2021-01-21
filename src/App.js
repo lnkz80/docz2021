@@ -11,14 +11,12 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      dir: SUBMENU['technics']
+      // dir: SUBMENU['technics']
+      dir: ''
     }    
   }
 
-
   updLeftMenu = (value) => {
-    console.log(value)
-
     this.setState({dir: SUBMENU[value]})
   }
 
@@ -26,12 +24,11 @@ class App extends React.Component {
     return (
       <div className='wrapper'>
         <Router>
-        <Header title = {SITETITLE} />
+        <Header title = {SITETITLE} updLeftMenu={this.updLeftMenu} />
         <TopMenu menu = {MENU} updLeftMenu={this.updLeftMenu} />
         <LeftMenu submenu={this.state.dir} />        
         <Content />                
         </Router>
-        
     </div>
     );
   }
